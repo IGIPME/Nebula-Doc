@@ -19,7 +19,11 @@
     /* type checking */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+
+    "paths": {
+      "i18n": ["./i18n.json"]
+    }
   },
   "include": ["docs", "theme", "rspress.config.ts"],
   "mdx": {

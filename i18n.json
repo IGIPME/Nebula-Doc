@@ -1,0 +1,22 @@
+{
+  "gettingStarted": {
+    "en-US": "Getting Started",
+    "zh-CN": "开始"
+  },
+  "manual": {
+    "en-US": "User Manual",
+    "zh-CN": "用户手册"
+  },
+  "develop": {
+    "en-US": "Development Docs",
+    "zh-CN": "开发文档"
+  },
+  "developmentguide": {
+    "en-US": "Development Guide",
+    "zh-CN": "开发指南"
+  },
+  "protocol": {
+    "en-US": "Protocol Docs",
+    "zh-CN": "协议文档"
+  }
+}

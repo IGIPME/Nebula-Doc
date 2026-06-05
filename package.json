@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rspress build",
     "check": "biome check --write",
-    "dev": "rspress dev",
+    "dev": "rspress dev --host 0.0.0.0 --port 3000",
     "format": "biome format --write",
     "preview": "rspress preview"
   },
@@ -19,6 +19,7 @@
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "zephyr-rspress-plugin": "^1.1.1"
   }
 }
