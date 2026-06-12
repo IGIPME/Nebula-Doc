@@ -19,11 +19,6 @@ export default defineConfig({
       },
     ],
   },
-  builderConfig: {
-    output: {
-      assetPrefix: 'http://cdn.istaroth.xin/',
-    },
-  },
   plugins: [withZephyr()],
   locales: [
     {
