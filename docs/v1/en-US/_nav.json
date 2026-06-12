@@ -1,16 +1,21 @@
 [
   {
-    "text": "Guide",
-    "link": "/guide/start/introduction",
-    "activeMatch": "/guide/"
+    "text": "Getting Started",
+    "link": "/manual/start/introduction",
+    "activeMatch": "/manual/"
   },
   {
-    "text": "API",
-    "link": "/api/",
-    "activeMatch": "/api/"
+    "text": "Development Guide",
+    "link": "/develop/developmentguide",
+    "activeMatch": "/develop/"
   },
   {
-    "text": "Document",
-    "link": "https://rspress.rs/"
+    "text": "Protocol Docs",
+    "link": "/protocol/",
+    "activeMatch": "/protocol/"
+  },
+  {
+    "text": "GitHub",
+    "link": "https://github.com/IGIPME/Nebula"
   }
 ]

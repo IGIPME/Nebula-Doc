@@ -1,6 +1,73 @@
 ---
-title: API Overview
+title: API 概览
 overview: true
 ---
 
-This is an API Overview page which outlines all the available APIs.
+# API 概览
+
+Nebula HTTP API 基于 Axum 框架，默认监听 `127.0.0.1:3030`。
+
+## 基础信息
+
+- **协议**：HTTP/1.1
+- **数据格式**：JSON（`application/json`）
+- **命名风格**：请求/响应均使用 camelCase
+- **CORS**：允许 `localhost:5173` 来源的跨域请求
+
+## 端点列表
+
+| 方法 | 路径 | 说明 |
+|------|------|------|
+| GET | `/health` | 健康检查 |
+| GET | `/api/templates` | 获取所有模板列表 |
+| GET | `/api/templates/{name}` | 获取指定模板的元数据和变量定义 |
+| POST | `/api/projects` | 创建/脚手架新项目 |
+
+## 错误响应
+
+所有 API 错误均返回统一的 JSON 格式：
+
+```json
+{
+  "error": {
+    "code": "template_not_found",
+    "message": "模板 'unknown' 不存在"
+  }
+}
+```
+
+### 错误码
+
+| HTTP 状态码 | 错误码 | 说明 |
+|-------------|--------|------|
+| 400 | `invalid_request` | 请求参数无效（缺少变量、值不合法等） |
+| 404 | `template_not_found` | 模板不存在 |
+| 409 | `project_conflict` | 目标文件已存在 |
+| 500 | `internal_error` | 服务器内部错误 |
+
+## 示例：创建项目
+
+```bash
+curl -X POST http://localhost:3030/api/projects \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "templateName": "pic-design",
+    "outputBase": "/home/alice/projects",
+    "variables": {
+      "project-name": "MyPIC",
+      "author": "Alice"
+    },
+    "overwrite": "fail",
+    "dryRun": true
+  }'
+```
+
+## 请求字段说明
+
+| 字段 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `templateName` | string | 是 | 模板名称 |
+| `outputBase` | string | 是 | 输出父目录的绝对路径 |
+| `variables` | object | 否 | 键值对形式的模板变量 |
+| `overwrite` | string | 否 | 冲突处理策略：`fail`（默认）、`overwrite`、`skip` |
+| `dryRun` | boolean | 否 | 是否仅预览不写入（默认 `false`） |

@@ -2,42 +2,42 @@
 pageType: home
 
 hero:
-  name: My Site
-  text: A cool website!
-  tagline: This is the tagline
+  name: Nebula Docs
+  text: EDA Platform for Micro/Nano Photonic Device Design
+  tagline: React + Rust, providing micro-nano photonic device design and system design solutions
   actions:
     - theme: brand
-      text: Quick Start
-      link: /guide/start/introduction
+      text: Get Started
+      link: /manual/start/introduction
     - theme: alt
       text: GitHub
-      link: https://github.com/web-infra-dev/rspress
+      link: https://github.com/IGIPME/Nebula
   image:
     src: /rspress-icon.png
-    alt: Logo
+    alt: Nebula Logo
 features:
-  - title: Blazing fast build speed
-    details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
-    icon: 🏃🏻‍♀️
-    link: /guide/start/introduction
-  - title: Support for MDX content writing
-    details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
-    icon: 📦
-    link: /guide/use-mdx/components
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
-    icon: 🎨
-    link: https://rspress.rs/guide/advanced/custom-search
-  - title: AI-friendly
-    details: Generate llms.txt and Markdown files compliant with the llms.txt specification through SSG-MD, making it easier for large language models to understand and use your documentation.
-    icon: 🤖
-    link: https://rspress.rs/guide/basic/ssg-md
-  - title: Static site generation
-    details: In production, it automatically builds into static HTML files, which can be easily deployed anywhere.
-    icon: 🌈
-    link: https://rspress.rs/guide/basic/ssg
-  - title: Providing multiple custom capabilities
-    details: Through its extension mechanism, you can easily extend theme UI and build process.
-    icon: 🔥
-    link: https://rspress.rs/guide/basic/custom-theme
+  - title: Project Scaffolding
+    details: Tera-based template engine for rapid photonic design project initialization with variable rendering and path validation.
+    icon: 🚀
+    link: /manual/start/getting-started
+  - title: CLI Tool
+    details: Full-featured command-line interface for template listing, project init, and interactive variable input.
+    icon: ⌨️
+    link: /manual/start/getting-started
+  - title: REST API
+    details: Axum-based HTTP API for remote project creation and management, ready for CI/CD integration.
+    icon: 🔌
+    link: /protocol/
+  - title: Simulation Integration
+    details: ANSYS Lumerical and Meep simulation support via gRPC server integration.
+    icon: 🔬
+    link: /manual/start/getting-started
+  - title: Multi-language Support
+    details: Python and Rust interfaces supported, with Simplified Chinese as the primary language.
+    icon: 🌐
+    link: /develop/developmentguide
+  - title: Docker Ready
+    details: Docker Compose configs for both development and production, one-command startup.
+    icon: 🐳
+    link: /manual/start/getting-started
 ---

@@ -3,41 +3,41 @@ pageType: home
 
 hero:
   name: Nebula Docs
-  text: A cool website!
-  tagline: This is the tagline
+  text: 微纳米光子器件设计 EDA 平台
+  tagline: React + Rust，提供微纳米光子器件设计与系统设计解决方案
   actions:
     - theme: brand
-      text: Quick Start
+      text: 新手上路
       link: /manual/start/introduction
     - theme: alt
       text: GitHub
-      link: https://github.com/IGIPME/Nebula-Doc
+      link: https://github.com/IGIPME/Nebula
   image:
     src: /rspress-icon.png
-    alt: Logo
+    alt: Nebula Logo
 features:
-  - title: Blazing fast build speed
-    details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
-    icon: 🏃🏻‍♀️
-    link: /guide/start/introduction
-  - title: Support for MDX content writing
-    details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
-    icon: 📦
-    link: /guide/use-mdx/components
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
-    icon: 🎨
-    link: https://rspress.rs/guide/advanced/custom-search
-  - title: AI-friendly
-    details: Generate llms.txt and Markdown files compliant with the llms.txt specification through SSG-MD, making it easier for large language models to understand and use your documentation.
-    icon: 🤖
-    link: https://rspress.rs/guide/basic/ssg-md
-  - title: Static site generation
-    details: In production, it automatically builds into static HTML files, which can be easily deployed anywhere.
-    icon: 🌈
-    link: https://rspress.rs/guide/basic/ssg
-  - title: Providing multiple custom capabilities
-    details: Through its extension mechanism, you can easily extend theme UI and build process.
-    icon: 🔥
-    link: https://rspress.rs/guide/basic/custom-theme
+  - title: 项目脚手架
+    details: 基于 Tera 模板引擎，支持从模板快速初始化光子设计项目，自动渲染变量并生成项目结构。
+    icon: 🚀
+    link: /manual/start/getting-started
+  - title: CLI 命令行
+    details: 提供完整的命令行界面，支持模板列表、项目初始化、变量交互式填充，可集成到自动化脚本中。
+    icon: ⌨️
+    link: /manual/start/getting-started
+  - title: REST API 服务
+    details: 基于 Axum 提供 HTTP API，可通过 REST 接口远程创建和管理项目，方便集成到 CI/CD 流程。
+    icon: 🔌
+    link: /protocol/
+  - title: 仿真集成
+    details: 支持 ANSYS Lumerical、Meep 仿真引擎，通过 gRPC 服务器进行仿真集成。
+    icon: 🔬
+    link: /manual/start/getting-started
+  - title: 多语言支持
+    details: 支持 Python、Rust 等多种接口，以中文（简体）为第一语言，方便自动化集成。
+    icon: 🌐
+    link: /develop/developmentguide
+  - title: Docker 部署
+    details: 提供开发与生产环境的 Docker Compose 配置，一键启动前后端服务。
+    icon: 🐳
+    link: /manual/start/getting-started
 ---

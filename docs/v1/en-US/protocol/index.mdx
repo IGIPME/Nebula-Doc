@@ -3,4 +3,44 @@ title: API Overview
 overview: true
 ---
 
-This is an API Overview page which outlines all the available APIs.
+# API Overview
+
+Nebula HTTP API is built on Axum, listening on `127.0.0.1:3030` by default.
+
+## Basics
+
+- **Protocol**: HTTP/1.1
+- **Format**: JSON (`application/json`)
+- **Naming**: camelCase for both requests and responses
+- **CORS**: Allows `localhost:5173` cross-origin requests
+
+## Endpoints
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/health` | Health check |
+| GET | `/api/templates` | List all templates |
+| GET | `/api/templates/{name}` | Get template metadata and variables |
+| POST | `/api/projects` | Create/scaffold a new project |
+
+## Error Response
+
+All API errors return a unified JSON format:
+
+```json
+{
+  "error": {
+    "code": "template_not_found",
+    "message": "Template 'unknown' not found"
+  }
+}
+```
+
+### Error Codes
+
+| HTTP Status | Error Code | Description |
+|-------------|------------|-------------|
+| 400 | `invalid_request` | Invalid request parameters |
+| 404 | `template_not_found` | Template does not exist |
+| 409 | `project_conflict` | Target file already exists |
+| 500 | `internal_error` | Internal server error |
